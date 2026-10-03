@@ -1,0 +1,15 @@
+Defender Action Frequencies:
+Action 4: 10
+Action 3: 13
+Action 2: 13
+Action 0: 2
+Action 1: 1
+Action 5: 1
+
+Attacker Action Frequencies:
+Action 1: 8
+Action 3: 7
+Action 2: 3
+Action 4: 9
+Action 5: 9
+Action 0: 4

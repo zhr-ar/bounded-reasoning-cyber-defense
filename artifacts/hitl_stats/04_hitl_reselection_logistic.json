@@ -1,0 +1,5 @@
+{
+  "engine": "BinomialBayesMixedGLM",
+  "note": "Variational Bayes fit; report median/mean params cautiously.",
+  "params": {}
+}

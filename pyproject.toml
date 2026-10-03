@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cht-dqn"
+version = "0.1.0"
+description = "Shared contracts for the CHT-DQN cyber-defense experiments"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy",
+  "torch",
+  "matplotlib",
+  "pandas",
+  "openpyxl",
+  "pytz",
+]
+
+[project.optional-dependencies]
+web = [
+  "Flask",
+  "Flask-Session",
+  "jsonpickle",
+  "gunicorn",
+]
+dev = [
+  "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

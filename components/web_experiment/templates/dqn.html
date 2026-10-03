@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+    <title>Interactive Cloud Security Game Using Attack Graphs</title>
+    <style>
+        .node {
+            cursor: pointer;
+            stroke: black;
+            stroke-width: 1.5px;
+        }
+        .link {
+            fill: none;
+            stroke: black;
+            stroke-width: 1.5px;
+        }
+        /* .probability {
+            font-size: 18px;
+            fill: red;
+        } */
+        .text {
+            font-size: 14px;
+            fill: black;
+        }
+        .legend {
+            font-size: 14px;
+            fill: black;
+            font-weight: bold;
+            position: absolute;
+            top: 280px;
+            right: 30px;
+        }
+        table {
+            margin-top: 10px;
+            border-collapse: collapse;
+            width: 90%;
+            font-size: 12px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+        caption {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .confirmation-box {
+            display: none;
+            position: fixed;
+            bottom: 300px;
+            left: 15%;
+            transform: translateX(-50%);
+            background-color: lightblue;
+            border: 1px solid #888;
+            padding: 10px;  /* Reduce padding */
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;  /* Set a fixed width if needed */
+            font-size: 14px;  /* Adjust font size to make the box smaller */
+        }
+
+        .game-over-message {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 60%; /* Adjust this percentage to position the message below the attacker node */
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Interactive Cloud Security Game Using Attack Graphs</h1>
+    <div id="timestepDisplay" style="font-weight: bold; color: blue; margin-bottom: 10px;"></div>
+    <svg width="1200" height="300"></svg>
+    <div class="legend" id="legend">
+        <p>Node: Vulnerability in the cloud system.</p>
+        <!--         <p>Link: Likelihood of attacker targeting, 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;based on both the attack graph and their strategy.</p> -->
+    </div>
+    <table id="rewardTable">
+        <caption>Your Potential Reward Based on All Possible Attacker Actions</caption>
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="confirmationBox" class="confirmation-box">
+        <p id="confirmationText"></p>
+        <button id="submitBtn">Submit</button>
+        <button id="cancelBtn">Cancel</button>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="{{ url_for('static', filename='dqn.js') }}"></script>
+</body>
+</html>

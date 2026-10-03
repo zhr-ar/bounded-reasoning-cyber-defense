@@ -1,0 +1,73 @@
+{
+  "errors": [],
+  "engine": "statsmodels.MixedLM",
+  "formula": "protection ~ C(condition) * C(stage) + (1|participant)",
+  "n_obs": 3200,
+  "n_participants": 80,
+  "converged": true,
+  "terms": [
+    {
+      "term": "Intercept",
+      "coef": 0.860052333651779,
+      "pvalue": 0.0,
+      "ci_low": 0.8473174791191851,
+      "ci_high": 0.872787188184373
+    },
+    {
+      "term": "C(condition)[T.transition_aware]",
+      "coef": -0.001277147172015481,
+      "pvalue": 0.8894589373788266,
+      "ci_low": -0.019286951166858357,
+      "ci_high": 0.016732656822827395
+    },
+    {
+      "term": "C(stage)[T.R11-20]",
+      "coef": -0.01308408158515984,
+      "pvalue": 0.08151197593881115,
+      "ci_low": -0.027805451157819357,
+      "ci_high": 0.001637287987499677
+    },
+    {
+      "term": "C(stage)[T.R21-30]",
+      "coef": -0.004871385719994205,
+      "pvalue": 0.5166206600121535,
+      "ci_low": -0.019592755292653724,
+      "ci_high": 0.009849983852665316
+    },
+    {
+      "term": "C(stage)[T.R31-40]",
+      "coef": -0.011398542862186039,
+      "pvalue": 0.12912241183045273,
+      "ci_low": -0.02611991243484556,
+      "ci_high": 0.003322826710473483
+    },
+    {
+      "term": "C(condition)[T.transition_aware]:C(stage)[T.R11-20]",
+      "coef": -0.0058136541812313204,
+      "pvalue": 0.5841651784010605,
+      "ci_low": -0.026632814687593057,
+      "ci_high": 0.015005506325130417
+    },
+    {
+      "term": "C(condition)[T.transition_aware]:C(stage)[T.R21-30]",
+      "coef": 0.019690560997397705,
+      "pvalue": 0.06377994269998644,
+      "ci_low": -0.0011285995089640316,
+      "ci_high": 0.04050972150375944
+    },
+    {
+      "term": "C(condition)[T.transition_aware]:C(stage)[T.R31-40]",
+      "coef": 0.016671299224664395,
+      "pvalue": 0.11653736603539404,
+      "ci_low": -0.004147861281697342,
+      "ci_high": 0.03749045973102613
+    },
+    {
+      "term": "Group Var",
+      "coef": 0.0496654450512751,
+      "pvalue": 4.079713625037667e-05,
+      "ci_low": 0.025940262946378467,
+      "ci_high": 0.07339062715617173
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+parser.add_argument(--eps_end, default=0.05, type=float, help=DQN: min epsilon of e-greedy)
+parser.add_argument(--eps_decay, default=0.93, type=float, help=DQN: multiplicative factor for decreasing epsilon)
+parser.add_argument(--my_seed, default=136, type=int, help=)
+
+
+
+Avg data protection 0.830728697227757

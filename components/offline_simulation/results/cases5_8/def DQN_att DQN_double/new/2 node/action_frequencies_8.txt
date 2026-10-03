@@ -1,0 +1,7 @@
+Defender Action Frequencies in evaluation:
+Action 1: 797
+Action 0: 203
+
+Attacker Action Frequencies in evaluation:
+Action 0: 835
+Action 1: 165

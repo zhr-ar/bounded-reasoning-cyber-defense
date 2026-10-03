@@ -1,0 +1,48 @@
+# Sensitive and restricted research data
+restricted_data/
+*.pem
+*.key
+
+# Local runtime state
+.runtime/
+flask_session/
+pickle_dir*/
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# JavaScript dependencies
+node_modules/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Local holdouts (not for paper; avoid mix-ups with published figures/results)
+_gitignored/
+
+# Overleaf / LaTeX manuscript (kept locally, not versioned here)
+paper/
+
+# Matched-simulation reruns (published outputs live in results/)
+components/web_matched_simulations/results_rerun/
